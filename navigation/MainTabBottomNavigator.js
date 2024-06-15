@@ -11,7 +11,7 @@ import Fontisto from '@expo/vector-icons/Fontisto'; // Home: <Fontisto name="tin
 import FontAwesome from '@expo/vector-icons/FontAwesome';// TopPicks: <FontAwesome name="diamond" size={24} color="black" />
 import Ionicons from '@expo/vector-icons/Ionicons';// Messages: <Ionicons name="chatbubble-ellipses-outline" size={24} color="black" />
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'; // Profile: <MaterialCommunityIcons name="face-man-profile" size={24} color="black" />
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'; // Profile: <MaterialCommunityIcons name="face-woman-profile" size={24} color="black" />
+//import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'; // Profile: <MaterialCommunityIcons name="face-woman-profile" size={24} color="black" />
 
 
 // to create the BottomTabNavigator
@@ -24,19 +24,21 @@ export const MainTabBottomNavigator=()=>{
                 screenOptions={({route})=> ({
                     tabBarIcon: ({focused, color, size}) =>{
                         let iconComponent;
+                        color= focused ? '#20C563' : 'gray';
+                        size= 20;
 
                         switch(route.name){
                             case 'Home':
-                                iconComponent =  <Fontisto name="tinder" size={24} color="black" />;
+                                iconComponent =  <Fontisto name="tinder" size={size} color={color} />;
                                 break; 
                             case 'TopPicks':
-                                iconComponent = <FontAwesome name="diamond" size={24} color="black" />;
+                                iconComponent = <FontAwesome name="diamond" size={size} color={color} />;
                                 break;
                             case 'Messages':
-                                iconComponent = <Ionicons name="chatbubble-ellipses-outline" size={24} color="black" />;
+                                iconComponent = <Ionicons name="chatbubble-ellipses-outline" size={size} color={color} />;
                                 break;
                             case 'Profile':
-                                iconComponent = <MaterialCommunityIcons name="face-man-profile" size={24} color="black" />;
+                                iconComponent = <MaterialCommunityIcons name="face-man-profile" size={size} color={color} />;
                                 break;
                             default:
                                 break;
@@ -44,7 +46,7 @@ export const MainTabBottomNavigator=()=>{
                         return iconComponent;
                     },
                     // to manage the colours of the icons when they are active or inactive.
-                    tabBarActiveTintColor: 'tomato',
+                    tabBarActiveTintColor: '#20C563',
                     tabBarInactiveTintColor: 'gray',
                 })}
             >
