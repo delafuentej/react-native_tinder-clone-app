@@ -1,10 +1,10 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {SafeAreaView, View, Text} from 'react-native';
 
 export const TopPicksScreen=()=>{
     return(
-        <View>
+        <SafeAreaView>
             <Text>TopPicks Screen</Text>
-        </View>
+        </SafeAreaView>
     )
 }
