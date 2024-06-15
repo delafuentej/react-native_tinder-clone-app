@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-//screens
-import { HomeScreen } from '../screens/HomeScreen';
-import { TopPicksScreen } from '../screens/TopPicksScreen';
-import { MessagesScreen } from '../screens/MessagesScreen';
-import { ProfileScreen } from '../screens/ProfileScreen';
+//import from StackNavigation
+import { HomeStackNavigator } from './StackNavigation/HomeStack';
+import { TopPicksStackNavigator } from './StackNavigation/TopPickStack';
+import { MessagesStackNavigator } from './StackNavigation/MessagesStack';
+import { ProfileStackNavigator } from './StackNavigation/ProfileStack';
 //icons
 import Fontisto from '@expo/vector-icons/Fontisto'; // Home: <Fontisto name="tinder" size={24} color="black" />
 import FontAwesome from '@expo/vector-icons/FontAwesome';// TopPicks: <FontAwesome name="diamond" size={24} color="black" />
@@ -22,6 +22,7 @@ export const MainTabBottomNavigator=()=>{
         <NavigationContainer>
             <Tab.Navigator
                 screenOptions={({route})=> ({
+                    headerShown: false,
                     tabBarIcon: ({focused, color, size}) =>{
                         let iconComponent;
                         color= focused ? '#20C563' : 'gray';
@@ -50,10 +51,10 @@ export const MainTabBottomNavigator=()=>{
                     tabBarInactiveTintColor: 'gray',
                 })}
             >
-                <Tab.Screen name="Home" component={HomeScreen} />
-                <Tab.Screen name="TopPicks" component={TopPicksScreen} />
-                <Tab.Screen name="Messages" component={MessagesScreen} />
-                <Tab.Screen name="Profile" component={ProfileScreen} />
+                <Tab.Screen name="Home" component={HomeStackNavigator} />
+                <Tab.Screen name="TopPicks" component={TopPicksStackNavigator} />
+                <Tab.Screen name="Messages" component={MessagesStackNavigator} />
+                <Tab.Screen name="Profile" component={ProfileStackNavigator} />
             </Tab.Navigator>
         </NavigationContainer>
 
