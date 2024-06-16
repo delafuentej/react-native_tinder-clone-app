@@ -24,22 +24,25 @@ export const MessagesScreen=()=>{
 
                 {Messages.map((user, i)=> (
                     <ListItem 
+                    
                     key={i}
-                    bottomDivider>
+                    bottomDivider
+                    containerStyle={styles.items}
+                    >
                  
                         <Avatar
                         style={styles.imgAvatar}
                         rounded
-                        resizeMode='center'
+                        resizeMode='contain'
                         source={user.pic}
                         />
-                        <ListItem.Content>
+                        <ListItem.Content >
                             <ListItem.Title style={styles.title}>{user.title}</ListItem.Title>
                             <ListItem.Subtitle style={styles.subtitle}>{user.message}</ListItem.Subtitle>
                         </ListItem.Content>
 
 
-                        <ListItem.Chevron color="white" />
+                        <ListItem.Chevron containerStyle={styles.chevron} color="#20C563" />
 
                     </ListItem>
                      
@@ -50,16 +53,25 @@ export const MessagesScreen=()=>{
 }
 
 const styles= StyleSheet.create({
+    items: {
+        backgroundColor:'black',
+    },
     title: {
         fontSize: 24,
-        color: '#3F3F3F',
+        color: '#20C563',
+        fontWeight:'bold',
       },
       subtitle: {
-        color: '#A5A5A5',
+        color: 'white',
       },
       imgAvatar:{
         height:50,
         width:50,
+        resizeMode:'cover'
 
+      },
+      chevron: {
+        fontWeight:'800',
       }
+
 })

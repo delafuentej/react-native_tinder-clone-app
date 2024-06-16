@@ -47,10 +47,23 @@ const styles= StyleSheet.create({
         position: 'absolute',
         left: 10,
         bottom: 30,
+        backgroundColor: '#FFFFFF80',
+        color:'black',
+        fontWeight:'bold',
+        padding:5,
+        borderRadius:10,
+        marginBottom:30,
+        
     },
     caption: {
         position: 'absolute',
         left:10,
         bottom:10,
+        backgroundColor:  '#FFFFFF80',
+        color:'black',
+        fontWeight:'bold',
+        padding: 5,
+        borderRadius:10,
+    
     },
 });

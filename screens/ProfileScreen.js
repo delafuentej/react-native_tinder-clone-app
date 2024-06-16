@@ -30,13 +30,13 @@ export const ProfileScreen=()=>{
             <Text h4 style={styles.name}>{title}</Text>
             <Text style={styles.desc}>{profession}</Text>
             <Divider style={styles.divider}/>
-            <Text style={styles.desc}>{hobbys}</Text>
+            <Text style={styles.text}>{hobbys}</Text>
             <Divider style={styles.divider}/>
-            <Text style={styles.desc}>Find me on Social here</Text>
+            <Text style={styles.textSocial}>Find me on Social here</Text>
             <View style={styles.socialLinks}>
-                <FontAwesome name='facebook-square' size={24} color="black" />
-                <FontAwesome name='instagram' size={24} color="black" />
-                <FontAwesome name='snapchat-square' size={24} color="black" />
+                <FontAwesome style={styles.icon} name='facebook-square' size={60} color="gray" />
+                <FontAwesome style={styles.icon} name='instagram' size={60} color="gray" />
+                <FontAwesome style={styles.icon} name='snapchat-square' size={60} color="gray" />
             </View>
 
 
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       alignItems: 'center',
+      backgroundColor: 'black',
     },
     imageContainer: {
       margin: 20,
@@ -60,16 +61,32 @@ const styles = StyleSheet.create({
       borderRadius: 20,
     },
     name: {
-      color: '#5E5E5E',
+      color: '#20C563',
       alignSelf: 'flex-start',
       marginLeft: 30,
+      fontSize:30,
+      fontWeight:'bold',
+     
     },
-    desc: {
-      color: '#5E5E5E',
+    text: {
+      fontSize:14,
+      textAlign: 'center',
+      color: 'white',
+    
+    },
+    textSocial: {
+      textAlign: 'center',
+      color: 'white',
+      fontSize:30,
+    },
+      desc: {
+      color: '#20C563',
       alignSelf: 'flex-start',
       marginTop: 5,
       marginHorizontal: 30,
-      fontSize: 14,
+      fontSize: 20,
+    
+      
     },
     divider: {
       backgroundColor: '#C0C0C0',
@@ -77,14 +94,16 @@ const styles = StyleSheet.create({
       margin: 20,
     },
     socialLinks: {
+      marginTop:0,
       flex: 1,
-      alignItems: 'flex-start',
+      justifyContent:"space-between",
+      alignItems: 'center',
       flexDirection: 'row',
-      width: Layout.window.width,
-      marginLeft: 40,
+      marginRight: 20,
+      width:Layout.window.window,
+      
     },
-    iconContainer: {
-      paddingHorizontal: 8,
-      paddingVertical: 15,
-    },
+    icon:{
+      marginRight:20,
+    }
   })

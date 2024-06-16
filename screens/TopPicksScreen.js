@@ -5,7 +5,7 @@ import { TopPicksScreenPics } from '../constants/TopPicksScreenPics';
 
 export const TopPicksScreen=()=>{
     return(
-        <SafeAreaView>
+        <SafeAreaView style={styles.container}>
            <ScrollView >
             <Text h2 h2Style={styles.h2Style}>
                 Top Picks
@@ -37,16 +37,17 @@ const styles = StyleSheet.create({
     display:1,
     justifyContent: 'center',
     alignItems:'center',
+    backgroundColor: 'black'
     
   },
     h2Style: {
       fontWeight: 'bold',
       textAlign: 'center',
-      color: '#000000',
+      color: '#20C563',
     },
     h4Style: {
       textAlign: 'center',
-      color: '#757575',
+      color: 'white',
     },
     grid: {
       marginTop: 20,
@@ -56,16 +57,23 @@ const styles = StyleSheet.create({
       position: 'absolute',
       left: 10,
       bottom: 50,
-      backgroundColor: 'black',
+      backgroundColor: '#FFFFFF80',
       marginBottom: -2,
       padding: 10,
+      color: 'black',
+      fontWeight: 'bold',
+      borderRadius:10,
+      marginBottom:10,
     },
     caption: {
       position: 'absolute',
       left: 10,
       bottom: 0,
-      backgroundColor: 'black',
+      backgroundColor: '#FFFFFF80',
+      color: 'black',
       marginTop: 10,
       padding: 10,
+      fontWeight:'bold',
+      borderRadius:10,
     },
   })
