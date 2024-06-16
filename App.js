@@ -57,5 +57,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'libre-baskerville-bold',
+    width:' 100vw',
+    height: '100vh',
   },
 });

@@ -8,5 +8,5 @@ export default {
         width,
         height,
     },
-    isSmallDevice: width < 600,
+    isSmallDevice: width < 375,
 };
