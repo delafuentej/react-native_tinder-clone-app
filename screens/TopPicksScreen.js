@@ -6,7 +6,7 @@ import { TopPicksScreenPics } from '../constants/TopPicksScreenPics';
 export const TopPicksScreen=()=>{
     return(
         <SafeAreaView>
-           <ScrollView>
+           <ScrollView >
             <Text h2 h2Style={styles.h2Style}>
                 Top Picks
             </Text>
@@ -33,6 +33,12 @@ export const TopPicksScreen=()=>{
 }
 
 const styles = StyleSheet.create({
+  container: {
+    display:1,
+    justifyContent: 'center',
+    alignItems:'center',
+    
+  },
     h2Style: {
       fontWeight: 'bold',
       textAlign: 'center',

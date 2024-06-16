@@ -1,10 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState, useEffect} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import { MainTabBottomNavigator } from './navigation/MainTabBottomNavigator';
 import { enableScreens } from 'react-native-screens';
+import Layout from './constants/Layout';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
+
+
+const BOTTOM_BAR_HEIGHT = !Platform.isPad ? 29 : 49 
 
 //to improve performance
 enableScreens();
@@ -42,9 +46,11 @@ export default function App() {
     return null;
   }else{
     return (
-      <View style={styles.container}>
-        <MainTabBottomNavigator />
-      </View>
+      
+         <MainTabBottomNavigator style={styles.container}/>
+      
+       
+      
     );
   }
   
@@ -53,11 +59,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection:'column',
+    justifyContent:'center',
+    alignContent:'center',
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     fontFamily: 'libre-baskerville-bold',
-    width:' 100vw',
-    height: '100vh',
+    width: Layout.window.width - 30,
+    height: Layout.window.height - BOTTOM_BAR_HEIGHT*6,
+ 
+  
   },
 });
