@@ -34,6 +34,8 @@ const styles= StyleSheet.create({
         width: Layout.window.width -30,
         height: Layout.window.height - BOTTOM_BAR_HEIGHT * 6,
         //to make that the border radius will be applied, it needs owverflow: hidden
+        // width: '100vw',
+        // height: '100vh',
         borderRadius: 20,
         overflow:'hidden',
 
