@@ -31,10 +31,13 @@ export const MessagesScreen=()=>{
                     >
                  
                         <Avatar
-                        style={styles.imgAvatar}
+                      
                         rounded
-                        resizeMode='contain'
+                        size={70}
                         source={user.pic}
+                        containerStyle={styles.imgAvatar}
+                       
+                    
                         />
                         <ListItem.Content >
                             <ListItem.Title style={styles.title}>{user.title}</ListItem.Title>
@@ -65,9 +68,8 @@ const styles= StyleSheet.create({
         color: 'white',
       },
       imgAvatar:{
-        height:50,
-        width:50,
-        resizeMode:'cover'
+        
+        backgroundColor: 'black',
 
       },
       chevron: {

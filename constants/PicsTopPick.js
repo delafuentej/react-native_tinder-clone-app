@@ -1,6 +1,6 @@
 import { shuffleyArray } from '../utils/shuffleArray'
 
-export const tpsPics = shuffleyArray([
+export const PicsTopPick = shuffleyArray([
     {
       pic: require('../assets/images/woman/woman11.jpg'),
       title: 'Annie, 40',

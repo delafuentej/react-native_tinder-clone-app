@@ -1,5 +1,5 @@
-import React from 'react';
-import { Platform, StyleSheet } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import { Platform, StyleSheet} from 'react-native';
 // Tile component from reaact-native-elements (@rneui) to display the user card
 import { Tile } from '@rneui/themed';
 import Layout from '../constants/Layout';
@@ -20,10 +20,9 @@ export const Card = ({pic, title, caption})=>(
         featured
     
     />
-
-
-    
 );
+
+
 
 const styles= StyleSheet.create({
     container: {

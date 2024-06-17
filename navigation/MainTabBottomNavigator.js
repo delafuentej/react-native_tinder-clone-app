@@ -2,10 +2,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 //import from StackNavigation
-import { HomeStackNavigator } from './StackNavigation/HomeStack';
-import { TopPicksStackNavigator } from './StackNavigation/TopPickStack';
-import { MessagesStackNavigator } from './StackNavigation/MessagesStack';
-import { ProfileStackNavigator } from './StackNavigation/ProfileStack';
+import { HomeStackNavigator } from './StackNavigation/HomeStackNavigator';
+import { TopPicksStackNavigator } from './StackNavigation/TopPickStackNavigator';
+import { MessagesStackNavigator } from './StackNavigation/MessagesStackNavigator';
+import { ProfileStackNavigator } from './StackNavigation/ProfileStackNavigator';
 //icons
 import Fontisto from '@expo/vector-icons/Fontisto'; // Home: <Fontisto name="tinder" size={24} color="black" />
 import FontAwesome from '@expo/vector-icons/FontAwesome';// TopPicks: <FontAwesome name="diamond" size={24} color="black" />

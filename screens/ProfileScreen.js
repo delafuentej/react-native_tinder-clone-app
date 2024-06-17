@@ -2,16 +2,16 @@ import React from 'react';
 import {SafeAreaView, Text, View, Image, StyleSheet} from 'react-native';
 import { Divider } from '@rneui/themed';
 import Layout from '../constants/Layout';
-import { hsPics } from '../constants/hsPics';
+import { PicsHome } from '../constants/PicsHome';
 import { randomNumber } from '../utils/randomNumber';
 
 //icons
 import FontAwesome from '@expo/vector-icons/FontAwesome';//<FontAwesome name={name} size={24} color="black" /> name='facebook-square' / 'snapchat-square' / 'instagram'
 
 
-const randomIndex = randomNumber(0, hsPics.length -1);
+const randomIndex = randomNumber(0, PicsHome.length -1);
 // console.log('randomIndex', randomIndex);
- const {pic, title, profession, hobbys} = hsPics[randomIndex] || {};
+ const {pic, title, profession, hobbys} = PicsHome[randomIndex] || {};
 //  console.log('pic', pic)
 //  console.log('title', title)
 

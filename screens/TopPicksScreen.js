@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, ScrollView,  View, StyleSheet} from 'react-native';
 import { Tile, Text } from '@rneui/base';
-import { tpsPics } from '../constants/tpsPics';
+import { PicsTopPick } from '../constants/PicsTopPick';
 
 export const TopPicksScreen=()=>{
     return(
@@ -14,7 +14,7 @@ export const TopPicksScreen=()=>{
                 Featured profiles of the day, picked just for you
             </Text>
             <View style={styles.grid}>
-                {tpsPics.map(({pic, title, caption}, i)=>(
+                {PicsTopPick.map(({pic, title, caption}, i)=>(
                     <Tile
                     key={title}
                     title={title}
@@ -34,7 +34,7 @@ export const TopPicksScreen=()=>{
 
 const styles = StyleSheet.create({
   container: {
-    display:1,
+    flex:1,
     justifyContent: 'center',
     alignItems:'center',
     backgroundColor: 'black'

@@ -2,14 +2,14 @@ import React from 'react';
 //SafeAreaView => renders content within the safe area boundaries of a device; should always be set up on screen components or any content in them, and not wrap entire navigators
 import {SafeAreaView, Text, StyleSheet} from 'react-native';
 import {Card} from '../components/Card';
-import { hsPics } from '../constants/hsPics';
+import { PicsHome } from '../constants/PicsHome';
 import Swiper from 'react-native-deck-swiper';
 
 export const HomeScreen=()=>{
     return(
         <SafeAreaView style={styles.container}>
            <Swiper
-            cards={hsPics}
+            cards={PicsHome}
             renderCard={Card}
             backgroundColor='black'
             cardHorizontalMargin={0}
